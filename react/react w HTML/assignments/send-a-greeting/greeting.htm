@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>HTML Template til React</title>
+  </head>
+  <body>
+
+    <!-- Du skal bygge et React komponent som kan skrive en hilsen til et navn, som du kan styre dynamisk via props objektet.
+
+    Komponenten skal skrives i en html fil med de nødvendige dependencies. -->
+    
+    
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.getElementById('root'))
+
+      const Greeting = (props) => {
+        return <div>hello {props.name}👋🏼</div>
+      }
+
+     root.render(<Greeting name='heinz'/>)
+
+    </script>
+
+  </body>
+</html>
