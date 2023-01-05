@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>HTML Template til React</title>
+  </head>
+  <body>
+    <!-- Du skal bygge et React komponent som kan tage et array med fem af dine livretter via props objektet og udskrive livretter som en ordered html liste.
+
+    Du skal selv skrive arrayet med dine livretter.
+
+    Komponenten skal skrives i en html fil med de nødvendige dependencies. -->
+
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.getElementById('root'))
+
+      const dishes = [
+        'adobo🍛',
+        'everything my mom makes✨',
+        'prima donna 🧀',
+        'waldorf salad 🥗',
+        'curry chicken and noodles w peanutbuttersauce🍜',
+      ]
+
+      const FavoriteDishes = (props) => {
+        return (
+           <ol>
+            {props.data.map(dishes => {
+                return (
+                    <li>{dishes}</li>
+                )
+            })}
+            </ol>
+        )
+      }
+
+      root.render(<FavoriteDishes data={dishes}/>)
+
+    </script>
+
+  </body>
+</html>

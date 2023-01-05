@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>shoe array</title>
+  </head>
+  <body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.getElementById('root'))
+
+      const shoe = [
+        {brand: 'Nike', color: 'red', type: 'sneaker' },
+        {brand: 'Christian Louboutin', color: 'black', type: 'heel' },
+        {brand: 'Birkenstock', color: 'mocca', type: 'sandal' },
+        {brand: 'NA-KD', color: 'blue', type: 'slipper' }
+      ]
+
+      const ShoeList = (props) => {
+        return (
+           <ol>
+            {props.data.map(shoe => {
+                return (
+                    <li>{shoe}</li>
+                )
+            })}
+            </ol>
+        )
+      }
+
+      root.render(<ShoeList data={shoe}/>)
+
+    </script>
+
+  </body>
+</html>
