@@ -1,5 +1,13 @@
 .container {
-    margin-left: 140px; /* Same width as the sidebar + left position in px */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
+    background-color: #efc3a4;
+    grid-row: 3 / 8;
+    grid-column: 2 / 6;
+    margin: 10px;
+    padding: 2px 20px;
+    color: #4b1f0e;
+
+    h2 {
+ 
+    }
+
 }

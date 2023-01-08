@@ -3,6 +3,7 @@ import style from './main.module.scss'
 const Main = () => {
     return (
         <main className={style.container}>
+            <h2>coffee coffee coffee</h2>
             <p>
                 Java roast eu, robusta single origin cinnamon strong sit cultivar cinnamon sit barista robusta. Mazagran brewed body caffeine, steamed cultivar redeye, in chicory aroma, roast blue mountain arabica est grinder. Brewed, frappuccino at cinnamon roast decaffeinated, mocha cortado, black, cappuccino, cortado, sugar a, aged, fair trade crema saucer barista galão grounds. Galão, dark, single shot at dark et iced, a café au lait dripper siphon, americano crema variety con panna and instant medium. Id, cultivar fair trade a, steamed coffee dripper et frappuccino kopi-luwak fair trade barista crema medium. Robust mocha dripper, barista, single shot foam, latte skinny, percolator cup latte viennese sugar seasonal whipped affogato chicory body mug instant. Instant aged french press, barista mocha, shop medium, plunger pot, grinder coffee espresso trifecta as, latte caramelization instant turkish espresso.
                 <br/><br/>
