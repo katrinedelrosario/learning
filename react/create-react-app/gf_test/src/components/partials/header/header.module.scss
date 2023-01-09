@@ -1,11 +1,22 @@
-$redHeader: #990a12;
+$redheader: #a00100;
+$white: #fff;
+$black: #080808;
+$bluelighttext: #8db3e2;
+$bluedarktext: #205868;
+$greyText: #959595;
+$bluepagenumber: #0170c0;
 
 .container {
     margin: 0px;
-    background-color: $redHeader;
-    min-height: 30vh;
+    background-color: $redheader;
+    min-height: 15vh;
+    align-content: center;
+    padding-top: 4em;
+    padding-bottom: 2em;
+
     h1, h2 {
         margin: 0;
-        color: white;
+        color: $white;
+        text-transform: capitalize;
     }
 }
