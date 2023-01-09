@@ -14,7 +14,7 @@ const Nav = (props) => {
         <ul className={style.container}>
             {props.data.map((navItem, key) => {
                return (
-                <li key={key}>{navItem.title}</li>
+                <li key={key}><a href={`#${navItem.title}`}>{navItem.title}</a></li>
                )     
             })}
         </ul>
