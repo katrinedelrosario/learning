@@ -1,22 +1,35 @@
 $redheader: #a00100;
 $white: #fff;
 $black: #080808;
-$bluelighttext: #8db3e2;
-$bluedarktext: #205868;
-$greyText: #959595;
-$bluepagenumber: #0170c0;
+$bluelight: #8ca7c1;
+$bluedark: #6f859d;
+$olivegreenlight: #babf8c;
+$olivegreendark: #969a6f;
+$rosabrownlight: #c7a69f;
+$rosabrowndark: #84695d;
 
 .container {
     margin: 0px;
-    background-color: $redheader;
-    min-height: 15vh;
-    align-content: center;
-    padding-top: 4em;
-    padding-bottom: 2em;
 
-    h1, h2 {
+    .header-bg {
+        background-image: url(./images/Bg-Hero-Blue.png);
+  
+    }
+
+    h1,
+    span {
         margin: 0;
+        text-transform: uppercase;
         color: $white;
-        text-transform: capitalize;
+        font-size: 70px;
+
+        span {
+            color: $bluedark;
+        }
+    }
+
+    h2 {
+        text-transform: uppercase;
+        color: $white;
     }
 }
