@@ -8,12 +8,13 @@ $olivegreendark: #969a6f;
 $rosabrownlight: #c7a69f;
 $rosabrowndark: #84695d;
 
+* {
+    margin: 0px 1em;
+}
 .container {
-    margin: 0px;
-
-    .header-bg {
-        background-image: url(./images/Bg-Hero-Blue.png);
-  
+    img {
+        object-fit: contain;
+        max-width: 100%;    
     }
 
     h1,
