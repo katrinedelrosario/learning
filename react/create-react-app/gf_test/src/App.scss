@@ -1,14 +1,33 @@
-$redheader: #a00100;
 $white: #fff;
 $black: #080808;
-$bluelighttext: #8db3e2;
-$bluedarktext: #205868;
-$greyText: #959595;
-$bluepagenumber: #0170c0;
+$bluelight: #8ca7c1;
+$bluedark: #6f859d;
+$olivegreenlight: #babf8c;
+$olivegreendark: #969a6f;
+$rosabrownlight: #c7a69f;
+$rosabrowndark: #84695d;
+
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-weight: 200;
+  src: url(./assets/font/open-sans-condensed/OpenSans-CondLight.ttf) format(truetype);
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: italic;
+  src: url(./assets/font/open-sans-condensed/OpenSans-CondLightItalic.ttf) format(truetype);
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: bold;
+  src: url(./assets/font/open-sans-condensed/OpenSans-CondBold.ttf) format(truetype);
+}
 
 .App {
   margin: 0px;
+
 }
+
 
 // .App-logo {
 //   height: 40vmin;

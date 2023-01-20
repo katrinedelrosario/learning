@@ -1,0 +1,18 @@
+$redheader: #a00100;
+$white: #fff;
+$black: #080808;
+$bluelighttext: #8db3e2;
+$bluedarktext: #205868;
+$greyText: #959595;
+$bluepagenumber: #0170c0;
+
+.container {
+    align-content: center;
+  h2 {
+    color: $bluelighttext;
+    text-transform: uppercase;
+  }
+  h3 {
+    color: $greyText;
+  }
+}
