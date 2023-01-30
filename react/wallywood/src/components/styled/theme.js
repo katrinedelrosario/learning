@@ -9,6 +9,4 @@ const theme = {
     fonts: ['Titillium Web', 'Open Sans'],
 }
 
-
-
 export {theme}
