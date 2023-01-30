@@ -1,8 +1,10 @@
-
+import {ContainerStyle} from './components/styled/container.style'
 function App() {
   return (
-    <div className="App">
-    </div>
+    <ContainerStyle>
+      
+    </ContainerStyle>
+
   );
 }
 
