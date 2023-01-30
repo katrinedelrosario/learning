@@ -1,9 +1,10 @@
+import Header from './components/partials/header';
 import {ContainerStyle} from './components/styled/container.style'
 
 function App() {
   return (
     <ContainerStyle maxwidth='1024'>
-      hello world
+      <Header />
     </ContainerStyle>
   );
 }
