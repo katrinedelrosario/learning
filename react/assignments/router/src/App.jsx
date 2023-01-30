@@ -1,28 +1,30 @@
-import './App.css';
 import React from 'react';
+import Header from './components/partials/header/header';
+import Footer from './components/partials/footer/footer';
+import Home from './components/pages/home/home';
+import { Route, Routes } from 'react-router-dom';
+import {Goals, GoalsDetails } from './components/pages/goals/goals'
+import NotFound from './components/errors/notfound';
+import './App.scss'
 
+const App = () => {
+    return (
+        <div className='App'>
+            <Header />
+            <main>
+                <Routes>
+                    <Route index element={<Home />} />
 
-import {
-  BrowserRouter as Router, Routes, Route
-} from 'react-router-dom'
-import { Home } from './components/pages/home/home';
+                    <Route path='/goals'>
+                        <Route index element={<Goals />} />
+                        <Route path=':id' element={<GoalsDetails />} />
+                    </Route>
 
-function App() {
-  return (
-    <div className="App">
-      <h1>welcome</h1>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='about' element={<About/>}/>
-      </Routes>
-    </div>
-  );
+                    <Route path='*' element={<NotFound />} />
+                </Routes>
+            </main>
+            <Footer />
+        </div>
+    )
 }
-
-ReactDOM.render((
-  <Router>
-    <App/>
-  </Router>
-), document.getElementById('app'))
-
-export default App;
+export default App

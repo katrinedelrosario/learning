@@ -1,0 +1,25 @@
+.wrapper {
+    margin: 0;
+    .nav {
+        margin: 0;
+        color: red;
+        text-decoration: none;
+
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #ccd5aeff;
+
+        li {
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            width: 80px;
+            padding: 14px;
+            color: aliceblue;
+            margin: 0;
+        }
+    }
+}

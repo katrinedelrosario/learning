@@ -1,16 +1,9 @@
-import ClickCounter from "./components/counter";
-import SendGreeting from "./components/greeting";
-import FormElements from "./components/formelements";
-import ContactForm from "./components/contactform";
 import './App.scss';
+import BrowserRouter from 'react'
 
-function App () {
-    return (
-        <SendGreeting />,
-        <ClickCounter />,
-        <ContactForm />,
-        <FormElements /> 
-      
-    )
-  }
+function App() {
+  return (
+      <BrowserRouter />      
+  )
+}
 export default App;
