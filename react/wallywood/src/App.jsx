@@ -4,8 +4,8 @@ function App() {
   return (
     <>
     <GlobalStyle />
-    <ContainerStyle>
-      
+    <ContainerStyle bg='blue'>
+      hjkldfcgvhbjnkm
     </ContainerStyle>
     </>
   );
