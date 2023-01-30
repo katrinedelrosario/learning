@@ -5,4 +5,5 @@ export const ContainerStyle = styled.section `
     min-height: 100vh;
     max-width: ${props => props.maxwidth}px;
     margin: 0 auto;
+    
 `
