@@ -1,11 +1,11 @@
 import { HeaderStyle } from "../styled/header.style";
-import NavBarPrimaryStyle from "../styled/navbarprimary.styled";
+import NavBarPrimary from "./navbarprimary";
 
 const Header = () => {
     return (
         <HeaderStyle>
             <h1>wallywood</h1>
-            <NavBarPrimaryStyle/>
+            <NavBarPrimary/>
         </HeaderStyle>
     )
 }

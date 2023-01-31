@@ -5,7 +5,6 @@ export const HeaderStyle = styled.header `
 border: solid 1px #000;
 display: flex;
 justify-content: space-between;
-marg
 
 h1 {
     font-family: ${props => props.theme.fonts[0]};

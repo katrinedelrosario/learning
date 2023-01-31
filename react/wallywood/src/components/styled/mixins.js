@@ -8,5 +8,9 @@ margin-inline-start: 0px;
 margin-inline-end: 0px;
 paddin-inline-start: 0px
 `
+const ClearList = `
+	list-style-type: none;
+	${Reset};	
+`
 
-export {Reset}
+export {Reset, ClearList}
