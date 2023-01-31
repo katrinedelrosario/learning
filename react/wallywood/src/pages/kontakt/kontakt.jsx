@@ -1,8 +1,14 @@
+import { ContentWrapper } from "../../components/app/contentwrapper/contentwrapper"
 
 
 const Kontakt = () => {
     return (
-      <div>kontakt</div>
+      <ContentWrapper
+      title='kontakt' 
+      description='description'
+      subtitle='subtitle'
+      >
+      </ContentWrapper>
     )
 }
 

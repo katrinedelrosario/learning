@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import { HeaderStyle } from "../styled/header.style";
 import NavBarPrimary from "./navbarprimary";
 
 const Header = () => {
     return (
         <HeaderStyle>
-            <h1>wallywood</h1>
+            <Link to ='/'>wallywood</Link>
             <NavBarPrimary/>
         </HeaderStyle>
     )

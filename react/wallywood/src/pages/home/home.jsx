@@ -1,7 +1,18 @@
+import { ContentWrapper } from "../../components/app/contentwrapper/contentwrapper"
+import SlideWrapper from "../../components/app/slidewrapper/slidewrapper"
 
 
 const Home = () => {
-    return (''
+    return (
+        <>
+            <SlideWrapper />
+            <ContentWrapper
+                title='sidste nyt...'
+                description='description'
+                subtitle='subtitle'
+            >
+            </ContentWrapper>
+        </>
     )
 }
 
