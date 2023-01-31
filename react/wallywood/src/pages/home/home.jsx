@@ -8,9 +8,8 @@ const Home = () => {
             <SlideWrapper />
             <ContentWrapper
                 title='sidste nyt...'
-                description='description'
-                subtitle='subtitle'
-            >
+                description='description'            
+                >
             </ContentWrapper>
         </>
     )

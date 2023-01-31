@@ -6,7 +6,6 @@ const Login = () => {
       <ContentWrapper
       title='login' 
       description='description'
-      subtitle='subtitle'
       >
       </ContentWrapper>
     )

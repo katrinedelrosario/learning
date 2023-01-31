@@ -6,7 +6,6 @@ const Kontakt = () => {
       <ContentWrapper
       title='kontakt' 
       description='description'
-      subtitle='subtitle'
       >
       </ContentWrapper>
     )

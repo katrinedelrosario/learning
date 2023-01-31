@@ -6,7 +6,7 @@ const Plakater = () => {
     <ContentWrapper
     title='plakater' 
     description='description'
-    subtitle='subtitle'
+    subtitle='filter'
     >
     </ContentWrapper>
   )
