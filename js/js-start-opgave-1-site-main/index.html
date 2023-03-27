@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>opgave 1 site</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script src="js/variables.js" defer></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <h1>test side</h1>          <!-- giver ikke class or id da der kun er én h1 -->
+    <h2 class="smallHeadline">afsnit</h2>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
+        quam,
+        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+        ultricies
+        mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat
+        wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum,
+        eros
+        ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.
+        Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam
+        erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+    <h2 class="smallHeadline">fieldset</h2>
+
+    <fieldset>
+        <legend>Forskellige inputs og interaktions muligheder</legend>   <!-- giver ikke class or id da der kun er én legend -->
+
+        <label for="monthInput" class="month">Month</label>   <!--tilføjede for="" på label da det skal være samme som id'et på tilhørende input-->
+        <input type="month" id="monthInput">
+
+        <label class="checkbox" for="checkboxInput"><input type="checkbox" name="checkbox id" id="checkboxInput">Check</label>
+
+        <label class="color" for="color">Color</label>
+        <input type="color" id="colorInput">
+
+
+        <label class="rbtn">radio buttons</label>
+        <label><input type="radio" name="radio" id="rbtn1">option 1</label>
+        <label><input type="radio" name="radio" id="rbtn2">option 2</label>
+        <label><input type="radio" name="radio" id="rbtn3">option 3</label>
+
+
+        <label class="range" for="rangeInput">Range</label>
+        <input type="range" id="rangeInput">
+
+        <input type="button" value="input Button" id="btnInput" class="btns">
+
+
+        <input type="reset" value="Reset" id="btnReset" class="btns">
+
+
+        <input type="submit" value="Submit" id="btnSubmit" class="btns">
+
+        <button id="btnButton" class="btns">button</button>
+
+        <label class="select">Select</label>
+
+        <select>
+            <optgroup label="first options" class="firstOptions">
+                <option id="selectOpt1">select 1</option>
+                <option id="selectOpt2">select 2</option>
+                <option id="selectOpt3">select 3</option>
+            </optgroup>
+            <optgroup label="second options" class="secondOptions">
+                <option id="selectOpt4">select 4</option>
+                <option id="selectOpt5">select 5</option>
+                <option id="selectOpt6">select 6</option>
+            </optgroup>
+        </select>
+    </fieldset>
+
+
+
+</body>
+
+</html>
