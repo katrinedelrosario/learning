@@ -1,0 +1,14 @@
+{
+    "name": "My First PWA",
+	"short_name": "MyFirstPWA",
+    "description": "This is my first PWA",
+	"start_url": "./index.html",
+	"id": "./index.html",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#ffffff",
+	"orientation": "portrait-primary",
+    "icons": [{
+        
+    }]
+}
