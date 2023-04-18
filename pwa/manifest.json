@@ -1,14 +1,24 @@
 {
-    "name": "My First PWA",
-	"short_name": "MyFirstPWA",
-    "description": "This is my first PWA",
+    "name": "PWA COOKBOOK",
+	"short_name": "PWACOOKBOOK",
+    "description": "This is my first site learning PWA",
 	"start_url": "./index.html",
 	"id": "./index.html",
 	"display": "standalone",
 	"background_color": "#ffffff",
 	"theme_color": "#ffffff",
 	"orientation": "portrait-primary",
-    "icons": [{
-        
-    }]
+    "icons": [
+        {
+            "src": "./img/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+
 }
