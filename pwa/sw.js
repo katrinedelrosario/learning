@@ -1,5 +1,6 @@
 //
-const staticCacheName = 'site-static'
+const staticCacheName = 'site-static-v3'
+const dynamicCacheName = 'site-dynamic-v1'
 
 const assets = [
 	'./',
@@ -10,8 +11,19 @@ const assets = [
 	'./css/styles.css',
 	'./css/materialize.min.css',
 	'./img/dish.png',
-	'./img/logo.png'
+	'./img/logo.png',
+	'./pages/fallback.html'
 ]
+//limit
+const limitCacheSize = (cacheName, numberOfAllowedFiles) => {
+	caches.open(cacheName).then(cache => {
+		cache.keys().then(keys => {
+			if(keys.length > numberOfAllowedFiles) {
+				cache.delete(keys[0]).then(limitCacheSize(cacheName, numberOfAllowedFiles))
+			}
+		})
+	})
+}
 
 // install service worker
 self.addEventListener('install', event => {
@@ -31,43 +43,42 @@ self.addEventListener('activate', event => {
 	event.waitUntil(
 		caches.keys().then(keys => {
 			//returns promise array and deletes old versions of caches
-			return Promise.all(keys.filter(key => key !== staticCacheName).map(key => caches.delete(key)))
+			return Promise.all(keys
+				.filter(key => key !== staticCacheName && key !== dynamicCacheName)
+				.map(key => caches.delete(key)))
 		})
 		)
+		return
 	})
 
-// fetch static
-self.addEventListener('fetch', event => {
-	//console.log('Fetch event', event)
-	console.log(event.request);
+// fetch 
+self.addEventListener("fetch", (event) => {
+	limitCacheSize(dynamicCacheName, 2);
+  
+	if (!(event.request.url.indexOf("http") === 0)) return;
 	event.respondWith(
-		caches.match(event.request).then(cacheRes => {
-			return cacheRes || fetch(event.request)
+	  caches
+		.match(event.request)
+		.then((cacheRes) => {
+		  return (
+			cacheRes ||
+			fetch(event.request).then((fetchRes) => {
+			  return caches.open(dynamicCacheName).then((cache) => {
+				cache.put(event.request.url, fetchRes.clone())
+				limitCacheSize(dynamicCacheName, 2)
+				return fetchRes
+			  });
+			})
+		  );
 		})
-	)
-})
-
-const dynamicCacheName = 'site-dynamic'
-
-// fetch dynamic
-self.addEventListener('fetch', event => {
-	//console.log('Fetch event', event)
-	console.log(event.request);
-	event.respondWith(
-		caches.match(event.request).then(cacheRes => {
-			return cacheRes || fetch(event.request)
-		})
-	)
-})
-
-//
-const limitCacheSize = (cacheName, numberOfAllowedFiles) => {
-	caches.open(cacheName).then(cache => {
-		cache.keys().then(keys => {
-			if(keys.length > numberOfAllowedFiles) {
-				cache.delete(keys[0]).then(limitCacheSize(cacheName, numberOfAllowedFiles))
+		.catch(() => {
+			if(event.request.url.indexOf('.html') > -1) {
+				return caches.match('pages/fallback.html')
 			}
-		})
-	})
-}
+		}
+	)
+)})
+
+
+
 
